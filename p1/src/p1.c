@@ -10,6 +10,8 @@
 #include <math.h>
 //location on karl's computer: cd Documents\GitHub\CS320\p1\src
 //run code using: gcc -lm -Wall -o p1 p1.c
+//Tranfer Files using Putty: pscp C:\Users\KarlP\Documents\GitHub\CS320\p1\src\p1.c
+//cssc0548@edoras.sdsu.edu:/home/cs/pkraft/cssc0548/test/prog1test
 
 int main(void){
     //Instantiated Varibles
@@ -23,11 +25,13 @@ int main(void){
     double costS = 0.00;
     double dAtMin = 0.00;
     double hAtMin = 0.00;
+    double dia = 0.00;
 
     //Constants And Adjustable Variables
     double pi = 3.14159265358979323846;
-    double diaStart = 0.001;
-    double diaInc = 0.001;
+    double precisionAdj = 0.0001; //adjust precision here.
+    double diaStart = precisionAdj;
+    double diaInc = precisionAdj;
     double h = 1.00;
 
     //Input
@@ -41,7 +45,7 @@ int main(void){
 
     //Calcs Brute Force
     printf("\n\nBrute Force Answer:\n");
-    for (double dia = diaStart; h > 0.001; dia = dia + diaInc) {
+    for (dia = diaStart; h > diaStart; dia = dia + diaInc) {
       //assume diamater and calc height
       h = (vol*4.00)/((dia*dia) * pi);
       //calculate the cost of an End
@@ -53,7 +57,7 @@ int main(void){
       costAdd = costE + costE + costS;
       //This starts costMin at the right spot so the following if statement does not fail.
       if (costMin == 0.00) {
-        costMin = costAdd + 0.01;
+        costMin = costAdd + precisionAdj;
       }
       //Compares costMin to the most recently added cost.
       if (costAdd < costMin) {
@@ -71,18 +75,18 @@ int main(void){
     //Calcs Calculus
     printf("\n\nCalculus Answer:\n");
     //Calculus optimized equation found by setting derivate to zero.
-    double dia = cbrt((vol*4.00*costSideMat)/(costEndMat*pi));
+    double dia4Calc = cbrt((vol*4.00*costSideMat)/(costEndMat*pi));
     //Remaining Calcs
-    h = (vol*4.00)/((dia*dia)*pi);
-    costE = ((pi/4.00)*(dia*dia))*costEndMat;
-    circum = pi*dia;
+    h = (vol*4.00)/((dia4Calc*dia4Calc)*pi);
+    costE = ((pi/4.00)*(dia4Calc*dia4Calc))*costEndMat;
+    circum = pi*dia4Calc;
     costS = (circum * h)*costSideMat;
     //Two Ends!!!!
     costAdd = costE + costE + costS;
     //Output for Calculus
     printf("\nCan Cost: %4.2f",costAdd);
-    printf("\nDiameter: %4.2f",dia);
-    printf("\nHeight: %4.2f",h);
+    printf("\nDiameter: %4.2f",dia4Calc);
+    printf("\nHeight: %4.2f\n",h);
 
     return 0;
 }
