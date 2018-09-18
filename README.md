@@ -4,13 +4,13 @@ My personal cloud of class notes and scripts.
 Most present lecture at the top.
 
 ## Lecture 9/17/18
-### Program 2 Info
+Program 2 Info:
 You can use the index and fill the space with the marker.
 Test if boundaries work.
 Test Number of Arguments inputted.
 No upper limit.
 
-### Some C Command line stuff
+Some C Command line stuff:
 Writing in ANSCII C
 C usually requires 2 arguments in main, one is count, one is a character array pointer
 
