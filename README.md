@@ -3,6 +3,27 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
+## Midterm Prep 9/19/18
+https://tylermcginnis.com/imperative-vs-declarative-programming/
+Imperative:
+- Java, C
+- Step by step on HOW
+- Open door of fridge, search for drink, grab a drink
+Declarative
+- XML, HTML
+- It's about WHAT you want
+- I need a drink
+
+https://www.reddit.com/r/learnprogramming/comments/71tbtm/whats_really_the_difference_between_procedural/
+Procedural
+- Use for Loops
+- Occur in orders
+- Can affect data structures (mutable)
+Functional
+- Use recursive functions.
+- Happen all in one feel swoop
+- Can't affect data structures
+
 ## Lecture 9/17/18
 Program 2 Info:
 You can use the index and fill the space with the marker.
@@ -14,10 +35,11 @@ Some C Command line stuff:
 Writing in ANSCII C
 C usually requires 2 arguments in main, one is count, one is a character array pointer
 
-
 ## Lecture 9/10/18
 grep is a good search tool in Unix
 regular expressions ... aka ... pattern matching or unique/unambiguous commands.
+using unix command line regex to figure out the remaining letters of a file
+the tab button!
 
 ## Lecture 9/5/18
 Reading will be covered in the next 2 weeks. Read them now though.
