@@ -4,6 +4,11 @@ My personal cloud of class notes and scripts.
 Most present lecture at the top.
 
 ## Midterm Prep 9/19/18
+Syntax: Rules of the Language
+Semantics: Meaning of the Language
+Lexeme: Each piece of a statement. Uses Lexical Analyzer to pull it apart.
+Token: Type of lexeme. Syntax Analyzer figures things out.
+
 https://tylermcginnis.com/imperative-vs-declarative-programming/
 Imperative:
 - Java, C
