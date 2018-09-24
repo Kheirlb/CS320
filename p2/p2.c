@@ -2,7 +2,7 @@
  *  Program 2
  *  Finds prime numbers within range.
  *  CS320-1
- *  9/21/18
+ *  9/24/18
  *  @author  Karl Parks cssc0548
  */
 
@@ -25,6 +25,7 @@ int numbers_only(const char *s) {
   return 1;
 }
 
+//returns next prime in the array
 int grabNextPrime(int mult, int length, int (*pa)[]) {
   //loop?
   int val = mult+1;
@@ -38,6 +39,7 @@ int grabNextPrime(int mult, int length, int (*pa)[]) {
   return 0;
 }
 
+//marks all multiples in the array
 void markMult(int mult, int length, int (*pa)[]) {
   int i = 0;
   for (i = mult; i < length - mult; i = i + mult){
@@ -49,7 +51,7 @@ void markMult(int mult, int length, int (*pa)[]) {
   return;
 }
 
-//take in argument from command line
+//take in Arguments from command line
 void main(int argc, char *argv[]) {
   //Hello
   //printf("Hello Karl, Beginning Program\n");
@@ -66,15 +68,14 @@ void main(int argc, char *argv[]) {
     printf("%s\n", invalid);
     return;
   }
-  else if (atoi(argv[1]) > 999) { //valid numbers, no doubles, no lettes, no decimals, no negative
+  else if (atoi(argv[1]) > 999) { //valid range
     printf("%s\n", invalid);
-    printf("No Values Above 999\n");
     return;
   }
   else {
     //printf("Valid Input\n");
   }
-  //out-of-range, test boundaries?
+  //Other tests: out-of-range, test boundaries?
 
   //allocate array at the size of n
   int n = atoi(argv[1]);
