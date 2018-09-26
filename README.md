@@ -15,7 +15,11 @@ Not allowed to include stdio.h in p3... because it's already in the header.
 Prog 3 Things
 Check if file exists.
 Open file:
-.*filename = = argv[1]
+.(star)filename = argv[1]
+FILE (star)fp
+
+if (!(fp = fopen(filename, "r")))
+  return 1;
 
 ## Midterm Prep 9/19/18
 Syntax: Rules of the Language
