@@ -3,6 +3,20 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
+## Lecture 9/26/18
+Array arithmetic
+Reason why arrays start at 0 because multiplying and adding by 0's starts you are the right spot.
+2x5 array... row major
+header in c is an interface in Java
+.#include <stdio.h>
+.#include "p3.h" local file
+Not allowed to include stdio.h in p3... because it's already in the header.
+
+Prog 3 Things
+Check if file exists.
+Open file:
+.*filename = = argv[1]
+
 ## Midterm Prep 9/19/18
 Syntax: Rules of the Language
 Semantics: Meaning of the Language
