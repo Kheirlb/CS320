@@ -15,11 +15,21 @@ Not allowed to include stdio.h in p3... because it's already in the header.
 Prog 3 Things
 Check if file exists.
 Open file:
-.(star)filename = argv[1]
+char (star)filename = argv[1]
 FILE (star)fp
 
 if (!(fp = fopen(filename, "r")))
   return 1;
+fscanf(fp, "%d", &x)
+
+Passing to Functions
+int x --> &x
+int (star)x --> x
+
+malloc:
+memory allocation
+in terms of bytes
+int (star)(star)a = malloc(2 x 3 x sizeof(int))
 
 ## Midterm Prep 9/19/18
 Syntax: Rules of the Language
