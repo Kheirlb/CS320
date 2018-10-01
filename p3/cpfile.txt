@@ -1,0 +1,5 @@
+FILE *fp;
+if (!(fp = fopen(filename, "r"))) {
+  return 1;
+}
+fscanf(fp, "%d", &x);
