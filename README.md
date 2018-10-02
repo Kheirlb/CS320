@@ -3,6 +3,32 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
+## Lecture 10/1/18
+
+Special Words: Reserved vs Keywords
+Keywords only special in certain context
+Reserved word is a special word that cannot be used as a user - defined name
+COBOL has 300 reserved words!!!
+
+A variable is an abstraction of a memory cell
+- name
+- address
+- value
+- types
+- lifetime
+- scope
+
+There are advantages and disadvantages to almost all types of programming.
+Binding... when does that name get associated that memory address
+Binding time is how long it takes to return
+1.c 2.c 3.c
+Compiler -> Linker -> Loader -> Run
+Implicit vs Explicit Declaration
+Loosely Typed vs Strongly Typed
+Static vs Dynamic Variables
+Elaborating -> Reserving memory on a stack
+
+
 ## Lecture 9/26/18
 Array arithmetic
 Reason why arrays start at 0 because multiplying and adding by 0's starts you are the right spot.
