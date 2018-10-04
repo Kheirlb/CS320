@@ -5,7 +5,7 @@ Most present lecture at the top.
 
 ## Lecture 10/3/18
 
-
+History of Fortran and how to use it.
 
 ## Lecture 10/1/18
 Special Words: Reserved vs Keywords
