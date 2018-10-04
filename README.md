@@ -4,7 +4,6 @@ My personal cloud of class notes and scripts.
 Most present lecture at the top.
 
 ## Lecture 10/3/18
-
 History of Fortran and how to use it.
 
 ## Lecture 10/1/18
