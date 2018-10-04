@@ -3,8 +3,11 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
-## Lecture 10/1/18
+## Lecture 10/3/18
 
+
+
+## Lecture 10/1/18
 Special Words: Reserved vs Keywords
 Keywords only special in certain context
 Reserved word is a special word that cannot be used as a user - defined name
