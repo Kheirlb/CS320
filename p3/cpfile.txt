@@ -1,5 +1,95 @@
+
+for(int i=0; i < m; i++) {
+  for(int j=0; j < p; j++) {
+    C[i][j] = 0;
+    for(int k=0; k < n; k++)
+      C[i][j] += A[i][k] * B[k][j];
+  }
+}
+
+int temp;
+printf("\nSecond Matrix\n");
+for (i = 0; i < *n; i = i + 1) {
+  for (j = 0; j < *p; j = j + 1) {
+    fscanf(fp, "%d", &dummy5);
+    printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+    printf("Scanned Number: %d\n", dummy5);
+    printf("Matrix Indices: r: %d c: %d\n",i,j);
+    printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+    temp = *(*(A+0)+0);
+    *(*(B+i)+j) = dummy5;
+    *(*(A+0)+0) = temp;
+    printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+    printf("Matrix Number: %d\n", *(*(B+i)+j));
+    printf("Matrix B[0][0]: %d\n", *(*(B+0)+0));
+  }
+  printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+  printf("Matrix B[0][0]: %d\n", *(*(B+0)+0));
+}
+
+*B = malloc(*n * *p * sizeof(int));
+printf("Size of B: %d\n", sizeof(B));
+printf("Malloc B SUCCEEDED\n");
+
+
+  printf("\nSecond Matrix\n");
+  for (i = 0; i < *n; i = i + 1) {
+    for (j = 0; j < *p; j = j + 1) {
+      fscanf(fp, "%d", &dummy5);
+      printf("Scanned Number: %d\n", dummy5);
+      printf("Matrix Indices: r: %d c: %d\n",i,j);
+      *(*(B+i)+j) = dummy5;
+      printf("Matrix Number: %d\n", *(*(B+i)+j));
+    }
+  }
+
+int dummy;
+int dummy2;
+int dummy3;
+int dummy4;
+int dummy5;
+fscanf(fp, "%d", &dummy); /*number of cols matrix B*/
+fscanf(fp, "%d", &dummy2); /*number of cols matrix B*/
+fscanf(fp, "%d", &dummy3); /*number of cols matrix B*/
+fscanf(fp, "%d", &dummy4); /*number of cols matrix B*/
+fscanf(fp, "%d", &dummy5); /*number of cols matrix B*/
+printf("Dummy: %d\n", dummy);
+printf("Dummy2: %d\n", dummy2);
+printf("Dummy3: %d\n", dummy3);
+printf("Dummy4: %d\n", dummy4);
+printf("Dummy5: %d\n", dummy5);
+
+
+
+
+*m = rA;
+*n = cArB;
+*p = cB;
+
+
 FILE *fp;
 if (!(fp = fopen(filename, "r"))) {
   return 1;
 }
 fscanf(fp, "%d", &x);
+
+
+void read_matrices(int **A, int **B, int **C,  int *m, int *n, int *p, char *filename){
+  return;
+}
+
+FILE *fp;
+if (!(fp = fopen(filename, "r"))) {
+  printf("File Does Not Exist\n");
+  return;
+}
+printf("Filename: %s\n", filename);
+fclose(fp);
+
+int i;
+int j;
+for (i = 0; i < *m; i = i + 1) {
+  for (j = 0; i < *n; i = i + 1) {
+    *(*(A+i)+j) = ;
+  }
+}

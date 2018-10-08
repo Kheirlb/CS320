@@ -53,6 +53,7 @@ void read_matrices(int **A, int **B, int **C,  int *m, int *n, int *p, char *fil
   printf("Value of p: %d\n", *p);
   int myintsize = sizeof(int);
 
+
   *A = malloc(rA * cArB * myintsize);
   printf("Size of A: %d\n", sizeof(A));
   printf("Malloc A SUCCEEDED\n");
@@ -61,49 +62,52 @@ void read_matrices(int **A, int **B, int **C,  int *m, int *n, int *p, char *fil
   printf("Size of B: %d\n", sizeof(B));
   printf("Malloc B SUCCEEDED\n");
 
-  int **e;
-  e=(int **) malloc(10*sizeof(int *));
-  int z;
-  for(z=0;z<10;z++)
-      *(e+z)=(int *) malloc(20*sizeof(int));
-
-  int **f;
-  f=(int **) malloc(10*sizeof(int *));
-  for(z=0;z<10;z++)
-      *(f+z)=(int *) malloc(20*sizeof(int));
-
   int i;
   int j;
   int dummy5;
   printf("\nFirst Matrix\n");
+  printf("Matrix B[1][0]: %d\n", *(*(B+1)+0));
   for (i = 0; i < *m; i = i + 1) {
     for (j = 0; j < *n; j = j + 1) {
       fscanf(fp, "%d", &dummy5);
       printf("Scanned Number: %d\n", dummy5);
       printf("Matrix Indices: r: %d c: %d\n",i,j);
-      *(*(e+i)+j) = dummy5;
-      printf("Matrix Number: %d\n", *(*(e+i)+j));
+      *(*(A+i)+j) = dummy5;
+      printf("Matrix Number: %d\n", *(*(A+i)+j));
+      printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
     }
+    printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
   }
+  printf("Outside Matrix A[0][0]: %d\n", *(*(A+0)+0));
+  printf("Outside Matrix A[0][1]: %d\n", *(*(A+0)+1));
+  printf("Matrix B[1][0]: %d\n", *(*(B+1)+0));
 
   printf("\nSecond Matrix\n");
   for (i = 0; i < *n; i = i + 1) {
     for (j = 0; j < *p; j = j + 1) {
       fscanf(fp, "%d", &dummy5);
+      printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
       printf("Scanned Number: %d\n", dummy5);
       printf("Matrix Indices: r: %d c: %d\n",i,j);
-      *(*(f+i)+j) = dummy5;
-      printf("Matrix Number: %d\n", *(*(f+i)+j));
+      printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+      A[0][0] = 1;
+      B[i][j] = dummy5;
+      printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+      printf("Matrix Number: %d\n", *(*(B+i)+j));
+      printf("Matrix B[0][0]: %d\n", *(*(B+0)+0));
     }
+    printf("Matrix A[0][0]: %d\n", *(*(A+0)+0));
+    printf("Matrix B[0][0]: %d\n", *(*(B+0)+0));
   }
 
-  printf("\nPrint Test TWO\n");
-  printf("Value of e[0][0]: %d\n", *(*(e+0)+0));
-  printf("Value of e[0][1]: %d\n", *(*(e+0)+1));
-  printf("Value of f[0][0]: %d\n", *(*(f+0)+0));
-  printf("Value of f[1][0]: %d\n", *(*(f+1)+0));
+  *(*(A+0)+0)=6;
+  printf("\nPrint Test\n");
+  printf("Value of A[0][0]: %d\n", *(*(A+0)+0));
+  printf("Value of A[0][1]: %d\n", *(*(A+0)+1));
+  printf("Value of B[0][0]: %d\n", *(*(B+0)+0));
+  printf("Value of B[1][0]: %d\n", *(*(B+1)+0));
 
-  mult_matrices(*e, *f, *C, *m, *n, *p);
+  /* mult_matrices(*A, *B, *C, *m, *n, *p); */
 
   fclose(fp);
   return;
@@ -115,32 +119,8 @@ void print_matrix(int *matrix, int m, int p){
 
 void mult_matrices(int *A, int *B, int *C, int m, int n, int p){
   printf("\nIn Multiple Matrices\n");
-  int valueTest = *B+1; /* col!!!!! */
-  /* m = 1 */
-  /* n = 2 */
-  /* p = 1 */
+  int valueTest = *(A);
   printf("Value Test: %d\n", valueTest);
-  printf("A[0][0]: %d\n", A[0]);
-  printf("A[0][1]: %d\n", A[1]);
-  printf("Size Of A: %d\n", sizeof(A));
-  printf("B[0][0]: %d\n", B[0]);
-  printf("B[1][0]: %d\n", B[22]);
-  /* why the hell is 22 my number */
-  printf("Value of m: %d\n", m);
-  printf("Value of n: %d\n", n);
-  printf("Value of p: %d\n", p);
-
-  int z;
-  for (z = 0; z < 40; z = z +1) {
-    printf("B[1][0]: %d", B[z]);
-    printf("\tz: %d\n", z);
-  }
-
-  /* A[0] = 1 A[0][0] */
-  /* A[1] = 2 A[0][1] */
-
-  /* B[0] = 3 */
-
   return;
 }
 
@@ -168,13 +148,17 @@ int main(int argc, char *argv[]) {
   printf("&B: %p\n", &B);
 
   read_matrices(&A, &B, &C, &m, &n, &p, filename);
-  /* mult_matrices(A, B, C, m, n, p); */
+/*  mult_matrices(A, B, C, m, n, p); */
 
   printf("\nBack in Main\n");
   printf("Address of m: %p\n", &m);
   printf("Value of m: %d\n", m);
   printf("Value of n: %d\n", n);
   printf("Value of p: %d\n", p);
+  printf("Value of A[0][0]: %d\n", *(A));
+  printf("Value of A[0][1]: %d\n", *(A+1));
+  printf("Value of A[0][0]: %d\n", *(B+0));
+  printf("Value of A[1][0]: %d\n", *(B));
 
 
   /*  */
