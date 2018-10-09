@@ -3,6 +3,25 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
+## Lecture 10/8/18
+HW due WEDNESDAY
+Prog 4 - FORTRAN (Recursion)
+Midterm 2:
+- 5, 6, & 7
+- Pointers
+- FORTRAN
+- Arrays
+- Subroutines
+- Function Calls
+- Scope
+
+Range of implicit variables: i, j, k, l, m, n
+TRIM(Full) gets rid of trailing spaces
+NIL character '\0'
+
+CHARACTER(LEN=10) :: First, Family
+
+
 ## Lecture 10/3/18
 History of Fortran and how to use it.
 
