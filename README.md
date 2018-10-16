@@ -3,6 +3,25 @@ My personal cloud of class notes and scripts.
 
 Most present lecture at the top.
 
+## Lecture 10/15/18
+Use gfortran!!!!
+
+Reading a program
+
+user defined
+- cardinal names: (counting one, two, three)
+- ordinal names: (ranking first, second, third)
+"what's the next thing" - must be absolutely obvious
+
+5 types of arrays:
+static
+fixed-stack dynamic
+stack dynamic
+fixed-heap dynamic
+heap dynamic
+
+dynamic scoping vs ...
+
 ## Lecture 10/8/18
 HW due WEDNESDAY
 Prog 4 - FORTRAN (Recursion)
