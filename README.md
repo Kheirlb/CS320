@@ -30,8 +30,7 @@ Midterm 2:
 - Pointers
 - FORTRAN
 - Arrays
-- Subroutines
-- Function Calls
+- Subroutines/Function Calls
 - Scope
 
 Range of implicit variables: i, j, k, l, m, n
