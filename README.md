@@ -1,6 +1,14 @@
 # CS320
 My personal cloud of class notes and scripts.
 
+Program Review followed by Lectures
+
+## Program Review
+p1 = Completed (No Errors)
+p2 = Completed (Some Errors)
+p3 = Incomplete (Many Errors)
+p4 = Completed (No Errors - Hopefully)
+
 Most present lecture at the top.
 
 ## Lecture 10/15/18
