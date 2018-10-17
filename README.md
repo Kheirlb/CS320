@@ -11,7 +11,7 @@ Reading a program
 user defined
 - cardinal names: (counting one, two, three)
 - ordinal names: (ranking first, second, third)
-"what's the next thing" - must be absolutely obvious
+"what's the next thing" - must be absolutely obvious - then ordinal
 
 5 types of arrays:
 static
