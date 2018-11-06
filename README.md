@@ -11,6 +11,14 @@ Program Review followed by Lectures
 
 Most present lecture at the top.
 
+## Lecture 11/5/18
+Abstract Data types
+examples: ArrayList, LinkedList
+"weapon against complexity"
+
+## Lecture 10/29/18
+Introduction to C++ and creating IntArray for Program 5
+
 ## Lecture 10/15/18
 Use gfortran!!!!
 
