@@ -4,10 +4,11 @@
 #ifndef _IADRV_H
 #define _IADRV_H
 
-#include "intarray.h"
+#include "intArray.h"
 
 int main();
 void test1();
+/*
 void test2();
 void test3();
 void test4();
@@ -27,7 +28,7 @@ void test17();
 void test18();
 void test19();
 void test20();
+*/
 void wait();
 
 #endif
-

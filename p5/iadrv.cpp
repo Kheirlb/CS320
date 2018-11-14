@@ -14,6 +14,7 @@ ofstream csis;
 int main() {
     csis.open("p4.dat");
     test1();
+    /*
     test2();
     test3();
     test4();
@@ -33,6 +34,7 @@ int main() {
     test18();
     test19();
     test20();
+    */
     csis.close();
 }
 
@@ -115,7 +117,7 @@ void test6() {
     csis << c << endl;
     IntArray e(c);
     e.setName("e");
-    cout << e << endl;    
+    cout << e << endl;
     csis << e << endl;
     wait();
 }
@@ -495,6 +497,3 @@ void wait() {
     cout << "Press any key to continue." << endl;
     cin.get(buf);
 }
-
-
-

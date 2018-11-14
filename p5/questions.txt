@@ -1,0 +1,2 @@
+1. Benefit of Member Functions out of class.
+2. Getting the driver to run at least the first test and fail.
