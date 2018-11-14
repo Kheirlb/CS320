@@ -2,7 +2,12 @@
 #include "batteryInfoClass.h"
 using namespace std;
 
-batteryInfo::batteryInfo(): data1(0), batInfo("some info") { }
+batteryInfo::batteryInfo(): data1(0), batInfo("some info") {
+  cout << "Constructor Ran" << endl;
+}
+batteryInfo::~batteryInfo() {
+  cout << "Destructor Ran" << endl;
+}
 
 void batteryInfo::print_data1(){
   data1 = 1;
