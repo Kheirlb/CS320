@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Max(int x, int y) {
+inline int Max(int x, int y) {
    return (x > y)? x : y;
 }
 
