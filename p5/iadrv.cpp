@@ -43,14 +43,20 @@ void test1() {
     cout << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     csis << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     IntArray a(10);
+    //Karl's stuff
+    cout << "a.low() is: " << a.low() << endl;
+    cout << "a.high() is: " << a.high() << endl;
+
     for(int i = a.low(); i <= a.high(); i++)
         a[i] = i * 10;
+    cout << "a[3] is: " << a[3] << endl;
     a.setName("a");
+    a.getName();
     cout << a << endl;
-    csis << a << endl;
+    //csis << a << endl;
     wait();
 }
-
+/*
 void test2() {
     system("cls");
     cout << "2. Array declared with two integers: IntArray b(-3, 6);" << endl << endl;
@@ -490,7 +496,7 @@ void test20() {
     csis << o << endl;
     wait();
 }
-
+*/
 void wait() {
     char buf;
 

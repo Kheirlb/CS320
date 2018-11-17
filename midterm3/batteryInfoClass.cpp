@@ -13,6 +13,7 @@ void batteryInfo::print_data1(){
   data1 = 1;
   cout << "data1 is: " << data1 << endl;
 }
+
 void batteryInfo::print_data1_constructorVal(){
   cout << "data1 is: " << data1 << endl;
 }
