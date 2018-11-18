@@ -2,7 +2,7 @@
 #include "intArray.h"
 using namespace std;
 
-IntArray::IntArray(): size(10), hi(9), lo(0), pA(new int[10]()) {
+IntArray::IntArray(): size(10), hi(9), lo(0), pA(new int[10]) {
   //: size(10), hi(9), lo(0), pA(new int[10]())
   cout << "Constructor Ran" << endl;
 }
@@ -10,7 +10,7 @@ IntArray::IntArray(): size(10), hi(9), lo(0), pA(new int[10]()) {
 IntArray::IntArray(int i) {
   //cout << "Created New Array of Size: " << i << endl;
   size = i;
-  pA = new int[size]();
+  pA = new int[size];
   hi = size - 1;
   lo = 0;
 }
@@ -21,7 +21,7 @@ IntArray::IntArray(int i, int j) {
     lo = i;
     size = (j-i)+1;
     cout << "Something 1" << endl;
-    pA = new int[size]();
+    pA = new int[size];
     cout << "Something 2" << endl;
   }
   else {
@@ -36,7 +36,7 @@ IntArray::IntArray(const IntArray& constArray) {
   lo = constArray.lo;
   cout << "Something 1" << endl;
   cout << "Size: " << size << endl;
-  pA = new int[size]();
+  pA = new int[size];
   cout << "Something 2" << endl;
   for (int i = lo; i <= hi; i++) {
     pA[i] = constArray.pA[i];
@@ -50,7 +50,7 @@ IntArray::~IntArray() {
 }
 
 //added "const"
-int& IntArray::operator[](int i) const {
+int& IntArray::operator[](int i) {
   return pA[i];
 }
 
@@ -67,7 +67,7 @@ IntArray& IntArray::operator=(const IntArray& constArray) {
 
 ostream& operator<<(ostream& os, const IntArray& array) {
   for(int i = array.lo; i <= array.hi; i++) {
-    os << array.name << "[" << i << "] = " << array[i] << endl;
+    os << array.name << "[" << i << "] = " << array.pA[i] << endl;
   }
   return os;
 }
