@@ -20,9 +20,9 @@ IntArray::IntArray(int i, int j) {
     hi = j;
     lo = i;
     size = (j-i)+1;
-    cout << "Something 1" << endl;
+    //cout << "Something 1" << endl;
     pA = new int[size];
-    cout << "Something 2" << endl;
+    //cout << "Something 2" << endl;
   }
   else {
     cout << "Low Index is not Below High Index" << endl;
@@ -34,10 +34,10 @@ IntArray::IntArray(const IntArray& constArray) {
   size = constArray.size;
   hi = constArray.hi;
   lo = constArray.lo;
-  cout << "Something 1" << endl;
+  //cout << "Something 1" << endl;
   cout << "Size: " << size << endl;
   pA = new int[size];
-  cout << "Something 2" << endl;
+  //cout << "Something 2" << endl;
   for (int i = lo; i <= hi; i++) {
     pA[i] = constArray.pA[i];
   }
