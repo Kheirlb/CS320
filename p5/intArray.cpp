@@ -2,51 +2,76 @@
 #include "intArray.h"
 using namespace std;
 
-IntArray::IntArray() {
+IntArray::IntArray(): size(10), hi(9), lo(0), pA(new int[10]()){
   cout << "Constructor Ran" << endl;
 }
 
 IntArray::IntArray(int i) {
-  cout << "Created New Array of Size: " << i << endl;
+  //cout << "Created New Array of Size: " << i << endl;
   size = i;
   pA = new int[size]();
   hi = size - 1;
   lo = 0;
-  //do not make a static array in Constructor
 }
 
 IntArray::IntArray(int i, int j) {
-  cout << "IntArray int int" << endl;
+  if (i <= j) {
+    hi = j;
+    lo = i;
+    size = (j-i)+1;
+    pA = new int[size]();
+  }
+  else {
+    cout << "Low Index is not Below High Index" << endl;
+  }
 }
 
 IntArray::IntArray(const IntArray& constArray) {
   cout << "IntArray&" << endl;
+  size = constArray.size;
+  hi = constArray.hi;
+  lo = constArray.lo;
+  pA = new int[size]();
+  for (int i = lo; i <= hi; i++) {
+    pA[i] = constArray.pA[i];
+  }
 }
 
 IntArray::~IntArray() {
   cout << "Destructor" << endl;
-  //pA = new int(10);
-  //do not make a static array in Constructor
 }
 
-int& IntArray::operator[](int i) {
+int& IntArray::operator[](int i) const {
   return pA[i];
 }
 
-ostream& IntArray::operator<<(ostream&, const IntArray& array) {
-  //os << d.feet << “\’ “ << d.inches << ‘\”’;
-  for(int i = array.low(); i <= array.high(); i++) {
-      cout << array[i] << endl;
+IntArray& IntArray::operator=(const IntArray& constArray) {
+  cout << "= operator" << endl;
+  // size = constArray.size;
+  // hi = constArray.hi;
+  // lo = constArray.lo;
+  // pA = new int[size]();
+  for (int i = lo; i <= hi; i++) {
+    pA[i] = constArray.pA[i];
+  }
+}
+
+ostream& operator<<(ostream& os, const IntArray& array) {
+  for(int i = array.lo; i <= array.hi; i++) {
+    os << array.name << "[" << i << "] = " << array[i] << endl;
   }
   return os;
 }
 
-void IntArray::setName(char* thename) {
-  name = (char *)thename;
+void IntArray::setName(const char* thename) {
+  name = thename;
 }
 
 void IntArray::getName() {
-  cout << "getName is: " << name << endl;
+  if (name != NULL)
+		cout << name << endl;
+	else
+		cout << "No name specified." << endl;
 }
 
 int IntArray::high(void) {

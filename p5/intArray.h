@@ -29,14 +29,14 @@ class IntArray {
         // Overloaded operators
         int operator==(const IntArray&);
         int operator!=(const IntArray&);
-        int& operator[] (int);                                      
-        IntArray& operator=(const IntArray&);                       
+        int& operator[] (int) const;
+        IntArray& operator=(const IntArray&);
         IntArray operator+(const IntArray&);
         IntArray& operator+=(const IntArray&);
         friend ostream& operator<<(ostream&, const IntArray&);
 
         // Helper functions
-        void setName(char *name);
+        void setName(const char *name);
         void getName();
         int  high();
         int  low();

@@ -14,13 +14,14 @@ ofstream csis;
 int main() {
     csis.open("p4.dat");
     test1();
+    /*
     test2();
     test3();
     test4();
     test5();
     test6();
     test7();
-    test8();/*
+    test8();
     test9();
     test10();
     test11();
@@ -32,7 +33,8 @@ int main() {
     test17();
     test18();
     test19();
-    test20();*/
+    test20();
+    */
     csis.close();
 }
 
@@ -41,14 +43,22 @@ void test1() {
     cout << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     csis << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     IntArray a(10);
+    //Karl's stuff
+    cout << "a.low() is: " << a.low() << endl;
+    cout << "a.high() is: " << a.high() << endl;
+
     for(int i = a.low(); i <= a.high(); i++)
         a[i] = i * 10;
+    cout << "a[3] is: " << a[3] << endl;
     a.setName("a");
+    a.getName();
+    int testa = a.high();
+    cout << "testa is: " << testa << endl;
     cout << a << endl;
     csis << a << endl;
     wait();
 }
-
+/*
 void test2() {
     system("cls");
     cout << "2. Array declared with two integers: IntArray b(-3, 6);" << endl << endl;
@@ -189,7 +199,7 @@ void test8() {
     csis << l << endl;
     wait();
 }
-/*
+
 void test9() {
     system("cls");
     cout << "9. Overloaded equality operator (identical elements): IntArray m(3, 7);"  << endl;
