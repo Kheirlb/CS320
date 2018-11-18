@@ -14,14 +14,13 @@ ofstream csis;
 int main() {
     csis.open("p4.dat");
     test1();
-    /*
     test2();
     test3();
     test4();
     test5();
     test6();
     test7();
-    test8();
+    test8();/*
     test9();
     test10();
     test11();
@@ -58,7 +57,7 @@ void test1() {
     csis << a << endl;
     wait();
 }
-/*
+//*
 void test2() {
     system("cls");
     cout << "2. Array declared with two integers: IntArray b(-3, 6);" << endl << endl;
@@ -199,7 +198,7 @@ void test8() {
     csis << l << endl;
     wait();
 }
-
+/*
 void test9() {
     system("cls");
     cout << "9. Overloaded equality operator (identical elements): IntArray m(3, 7);"  << endl;
