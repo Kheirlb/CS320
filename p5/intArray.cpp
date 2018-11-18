@@ -45,10 +45,11 @@ IntArray::IntArray(const IntArray& constArray) {
 
 IntArray::~IntArray() {
   cout << "Destructor" << endl;
-  delete[] pA;
-  pA = NULL;
+  //delete [] pA;
+  //pA = NULL;
 }
 
+//added "const"
 int& IntArray::operator[](int i) const {
   return pA[i];
 }

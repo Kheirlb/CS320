@@ -37,7 +37,7 @@ int main() {
 }
 
 void test1() {
-    //system("cls");
+    system("cls");
     cout << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     csis << "1. Array declared with single integer: IntArray a(10);" << endl << endl;
     IntArray a(10);
@@ -50,7 +50,7 @@ void test1() {
 }
 
 void test2() {
-    //system("cls");
+    system("cls");
     cout << "2. Array declared with two integers: IntArray b(-3, 6);" << endl << endl;
     csis << "2. Array declared with two integers: IntArray b(-3, 6);" << endl << endl;
     IntArray b(-3, 6);
@@ -63,7 +63,7 @@ void test2() {
 }
 
 void test3() {
-    //system("cls");
+    system("cls");
     cout << "3. Array declared with two integers: IntArray c(6, 8);" << endl << endl;
     csis << "3. Array declared with two integers: IntArray c(6, 8);" << endl << endl;
     IntArray c(6, 8);
@@ -76,7 +76,7 @@ void test3() {
 }
 
 void test4() {
-    //system("cls");
+    system("cls");
     cout << "4. Array declared with two identical integers: IntArray d(5, 5);" << endl << endl;
     csis << "4. Array declared with two identical integers: IntArray d(5, 5);" << endl << endl;
     IntArray d(5, 5);
@@ -89,7 +89,7 @@ void test4() {
 }
 
 void test5() {
-    //system("cls");
+    system("cls");
     cout << "5. Array declared with no integers: IntArray z;" << endl << endl;
     csis << "5. Array declared with no integers: IntArray z;" << endl << endl;
     IntArray z;
@@ -102,7 +102,7 @@ void test5() {
 }
 
 void test6() {
-    //system("cls");
+    system("cls");
     cout << "6. Array declared with another object of type IntArray: IntArray c(6, 8);" << endl;
     cout << "                                                        Intarray e(c);"    << endl << endl;
     csis << "6. Array declared with another object of type IntArray: IntArray c(6, 8);" << endl;
@@ -121,7 +121,7 @@ void test6() {
 }
 
 void test7() {
-  //  system("cls");
+    system("cls");
     cout << "7. Array assigned to another array with different indices: IntArray f(1, 4);"  << endl;
     cout << "                                                           IntArray g(5, 8);"  << endl;
     cout << "                                                           f = g;"             << endl << endl;
@@ -141,7 +141,7 @@ void test7() {
     cout << g << endl;
     csis << g << endl;
     wait();
-    //system("cls");
+    system("cls");
     f = g;
     cout << f << endl;
     cout << g << endl;
@@ -151,7 +151,7 @@ void test7() {
 }
 
 void test8() {
-    //system("cls");
+    system("cls");
     cout << "8. Multiple array assignment with different indices: IntArray j(3, 6);"  << endl;
     cout << "                                                     IntArray k(6, 9);"  << endl;
     cout << "                                                     IntArray l(1, 4);"  << endl;
@@ -179,7 +179,7 @@ void test8() {
     cout << l << endl;
     csis << l << endl;
     wait();
-    //system("cls");
+    system("cls");
     j = k = l;
     cout << j << endl;
     cout << k << endl;

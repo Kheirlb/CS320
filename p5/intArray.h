@@ -5,7 +5,7 @@
 #define _INTARRAY_H
 #include <iostream>
 #include <iomanip>
-#include "String.h"         // warnings issued whether this or <string>
+//#include "String.h"         // warnings issued whether this or <string>
 #include <fstream>          // necessary for external file ptr
 #include <stdlib.h>
 
@@ -29,7 +29,7 @@ class IntArray {
         // Overloaded operators
         int operator==(const IntArray&);
         int operator!=(const IntArray&);
-        int& operator[] (int) const;
+        int& operator[] (int) const; //added "const"
         IntArray& operator=(const IntArray&);
         IntArray operator+(const IntArray&);
         IntArray& operator+=(const IntArray&);
