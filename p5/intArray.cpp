@@ -1,3 +1,11 @@
+/**
+     *  Program 5
+     *  IntArray Class
+     *  CS108-2
+     *  11/19/2018
+     *  @author  Karl Parks cssc0548
+     */
+
 #include <iostream>
 #include "intArray.h"
 using namespace std;
