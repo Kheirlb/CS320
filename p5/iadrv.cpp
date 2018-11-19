@@ -13,26 +13,26 @@ ofstream csis;
 
 int main() {
     csis.open("p4.dat");
-    test1();
-    test2();//*
-    test3();
-    test4();
-    test5();
-    test6();
-    test7();
-    test8();/*
-    test9();
-    test10();
-    test11();
-    test12();
-    test13();
-    test14();
+    // test1();
+    // test2();
+    // test3();
+    // test4();
+    // test5();
+    // test6()
+    // test7();
+    // test8();
+    // test9();
+    // test10();
+    // test11();
+    // test12();
+    // test13();
+    // test14();
     test15();
-    test16();
-    test17();
-    test18();
-    test19();
-    test20();*/
+    // test16();
+    // test17();
+    // test18();
+    // test19();
+    // test20();
     csis.close();
 }
 
@@ -141,8 +141,11 @@ void test7() {
     cout << g << endl;
     csis << g << endl;
     wait();
-    system("cls");
+    //cout << "Debug 1" << endl;
+    //system("cls");
+    //cout << "Debug 2" << endl;
     f = g;
+    //cout << "Debug 3" << endl;
     cout << f << endl;
     cout << g << endl;
     csis << f << endl;
@@ -151,7 +154,7 @@ void test7() {
 }
 
 void test8() {
-    system("cls");
+    //system("cls");
     cout << "8. Multiple array assignment with different indices: IntArray j(3, 6);"  << endl;
     cout << "                                                     IntArray k(6, 9);"  << endl;
     cout << "                                                     IntArray l(1, 4);"  << endl;
@@ -179,7 +182,7 @@ void test8() {
     cout << l << endl;
     csis << l << endl;
     wait();
-    system("cls");
+    //system("cls");
     j = k = l;
     cout << j << endl;
     cout << k << endl;
@@ -189,7 +192,7 @@ void test8() {
     csis << l << endl;
     wait();
 }
-/*
+
 void test9() {
     system("cls");
     cout << "9. Overloaded equality operator (identical elements): IntArray m(3, 7);"  << endl;
@@ -273,7 +276,7 @@ void test11() {
 }
 
 void test12() {
-    system("cls");
+    //system("cls");
     cout << "12. Overloaded inequality operator (identical elements): IntArray s(3, 7);" << endl;
     cout << "                                                         IntArray t(1, 5);" << endl;
     cout << "                                                         s != t;"           << endl << endl;
@@ -293,7 +296,7 @@ void test12() {
     cout << t << endl;
     csis << t << endl;
     wait();
-    system("cls");
+    //system("cls");
     s = t;
     cout << s << endl;
     cout << t << endl;
@@ -408,7 +411,7 @@ void test16() {
     csis << d << endl;
     wait();
 }
-
+/*
 void test17() {
     system("cls");
     cout << "17. Array declared with illegal array bounds: IntArray f(5, 2);" << endl << endl;
