@@ -1,0 +1,7 @@
+1. Segmentation fault after test 2/3
+2. built code for return pA[i] vs return pA[i-lo]
+    Adjust in operators: =, +
+3. Test 8 Errors
+    Why is array l affected?
+4. Test 15 Errors
+    Why is my addition messed up?
