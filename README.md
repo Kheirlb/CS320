@@ -8,8 +8,92 @@ Program Review followed by Lectures
 - p2 = Completed (Some Errors)
 - p3 = Incomplete (Many Errors)
 - p4 = Completed (No Errors - Hopefully)
+- p5 = Completed (No Errors - Hopefully)
 
 Most present lecture at the top.
+
+## Lecture 12/3/18
+Lambda "no-name" functions
+- has to do with the local binding of a function... where it is and how its used
+- func/proc "lambda"
+
+define normal function - "syntactic-sugar or implicit"
+lambda is "explicit" functions
+The benefit is through history...
+
+(define x
+  (lambda ()
+    100))
+define a variable named x as an anonymous function with zero arguments that returns 100
+
+set?
+
+map = mapping over a list with a new things
+
+(if (and (>ba)(<b(starab)))
+b if
+a else
+
+(+ 2 3) = pre-fix, returns 5
+(2+3) = infix, returns 5
+
+cond = switch statement
+
+(cond
+  ((= a 4) 6)       if a = 4, return 6
+  ((= b 4)(+ 6 7 a))  if b = 4, return 6 + 7
+  (else 25))
+
+a = 2
+b = 5
+Every expression/function returns something...
+
+cons <- pairs, not lists
+(a.b) pair
+(a b) function
+'(a b) lists
+
+(cons 1 2) -> (1.2)
+
+car <- returns first element of a pairs
+cdr <- returns rest of list (all but first element)
+(cdr '(1))
+
+(cons 'a(cons 'b (cons 'c '())))
+(a b c)
+quote(a b c)
+'(a b c)
+
+(define concatenate
+  (lambda (lis1 lis2)
+    (if (null> lis1)
+      lis2
+      (cons (car lis1)
+        (concatenate (cdr lis1)
+          lis2)))))
+
+(a b) (c d)
+
+with Lambda
+
+(define (concatenate lis1 lis2)
+  (if ...))
+
+----
+base: list null '()
+      get first element, compare to c
+      (eq? c (car lis)) keep Looking
+        (cons (car lis)) recursive with rest of list (cdr list)
+
+(define (deleteall atm lis)
+  (cond
+    ((null? lis)'()')         if lis is null, return nothing
+    ((eq? atm (car lis))(deleteall atm (cdr lis)))    if equal to first element in list
+    (else (cons (car lis)(deleteall atm (cdr lis))))))
+
+(tally c '(a b c d c b c))
+= 3
+
 
 ## Lecture 11/5/18
 Abstract Data types
