@@ -12,6 +12,31 @@ Program Review followed by Lectures
 
 Most present lecture at the top.
 
+## Lecture 12/5/18
+define vs set!
+symbol? "type check predicate"
+car pointer to a pair?
+(define lis0 (one 2 (three and a) four 5))
+(car (cdr lis0)) = (cadr lis0)
+(cddr lis0)
+(caddr lis0)
+(cadr (cadr lis0))
+(cadr (cddr lis0))
+
+test question:
+Define a function cadr that gives the car of the cdr of a list.
+
+(define (cadr x)
+  (car (cdr x)))
+
+(define cadr
+  (lambda (x)...
+
+list-ref
+
+Everything is an object in racket
+
+
 ## Lecture 12/3/18
 Lambda "no-name" functions
 - has to do with the local binding of a function... where it is and how its used
