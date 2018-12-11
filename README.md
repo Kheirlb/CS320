@@ -34,7 +34,7 @@ Define a function cadr that gives the car of the cdr of a list.
 
 list-ref
 
-Everything is an object in racket
+Everything is an object in racket...
 
 
 ## Lecture 12/3/18
