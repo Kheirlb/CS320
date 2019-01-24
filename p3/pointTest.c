@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
 
   //normal pointer stuff (no arrays)
   int a;
-  int *p; //p is not a pointer to an into
+  int *p; //p is now a pointer to an int
   int *p2;
   a = 100;
   p = &a; //reference a and assign memory address to p
